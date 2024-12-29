@@ -1,0 +1,50 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Stack all content vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #ffffff; /* Light background */
+  overflow: hidden;
+}
+
+.fade-container {
+  display: flex;
+  flex-direction: column; /* Ensure the image and text stack vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.fade-image {
+  max-width: 80%; /* Scale image to fit the screen */
+  max-height: 60%; /* Prevent the image from overflowing vertically */
+  object-fit: contain; /* Maintain aspect ratio */
+  animation: fadeInOut 4s infinite; /* Fade animation */
+}
+
+.witty-text {
+  margin-top: 0px;
+  font-family: Roboto, sans-serif;
+  font-size: 2.5rem;
+  color: black; /* Make sure the text is visible */
+  text-align: center;
+  width: 100%;
+}
+
+/* Fade In/Out Animation */
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
